@@ -43,7 +43,15 @@ and the overall Gauge transform is $(KF)$[...], and the inverse is $(KF)^{-1}$[.
 
 After we get the fundamental solution $\Psi$, we can construct $\Phi$ on the Sto_k in a similar way.
 
+## Dependency
 
+sympy                     1.13.2
+
+## Get Started
+
+The Notebook of Constant_Case.ipynb contains many examples where $A$ is constant.
+
+The General_Case.ipynb contains many examples where $A$ is not constant and we solve in the way that stated above. 
 
 
 
