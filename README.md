@@ -53,7 +53,7 @@ The Notebook of Constant_Case.ipynb contains many examples where $A$ is constant
 
 The General_Case.ipynb contains many examples where $A$ is not constant and we solve in the way that stated above. 
 
-One could view the examples by opening the ipynb files in github directly to see the examples.
+One could view the examples by opening the ipynb files in github directly.
 
 ## Reference
 
