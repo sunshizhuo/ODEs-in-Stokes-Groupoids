@@ -1,6 +1,8 @@
 # ODEs-in-Stokes-Groupoids
 A Project written from pure python to solve ODEs on the Stokes groupoid
 
+## Introduction
+
 Restate the problem that we want to solve: 
 
 $$z^k \frac{d\psi}{dz} = A(z)\psi$$, where $\psi$ is a vector-valued function and $A(z)$ as a given matrix-valued function is holomorphic.
