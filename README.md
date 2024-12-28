@@ -53,6 +53,14 @@ The Notebook of Constant_Case.ipynb contains many examples where $A$ is constant
 
 The General_Case.ipynb contains many examples where $A$ is not constant and we solve in the way that stated above. 
 
+One could view the examples by opening the ipynb files in github directly to see the examples.
+
+## Reference
+
+Gualtieri, Marco, Songhao Li, and Brent Pym. "The stokes groupoids." Journal für die reine und angewandte Mathematik (Crelles Journal) 2018.739 (2018): 81-119.
+
+
+
 
 
 
