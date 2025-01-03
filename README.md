@@ -1,5 +1,7 @@
 # ODEs-in-Stokes-Groupoids
-A Project written from pure python to symbolically solve ODEs on the Stokes groupoid
+A Project written from pure python to symbolically solve ODEs on the Stokes groupoid.
+
+Instructor: Professor Marco Gualtieri 
 
 ## Introduction
 
