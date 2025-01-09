@@ -29,7 +29,9 @@ In the case where we can't find it easily, we use Formal Gauge transform (call i
 
 To do the Gauge transformation, the core idea is to transfer it to the case where $z^k \frac{d\tilde{\psi}}{dz} = (D_0+zD_1+...z^{k-1}D_{k-1})\tilde{\psi}$, where $D_i$ are diagonal, which can be easily solve by entries on both sides.
 
-In order to solve this problem, we first need to make a change of variables $\psi' = F \psi$, whereas $F = 1+zF_1 + z^2F_2 + ...$
+In order to solve this problem, we first need to make a change of variables $\psi' = F \psi$ (a change of coordinate), whereas $F = 1+zF_1 + z^2F_2 + ...$
+
+Then, let $B(z) = \frac{A(z)}{z}$, then after this change of coordinate, the original system becomes $\frac{d\psi'}{dz} = (FBF^{-1} + \frac{dF}{dz}F^{-1})\psi'$
 
 In this step, we let $F = (I+zH_1)(I+z^2H_2)...$ where $H_p = {ad}^{-1}_{A_0}(A_p^{OD})$ if $k > 1$ 
 
@@ -43,7 +45,7 @@ which is the transform $K = \exp(-\int{D_k+D_{k+1}z+...})$
 
 Finally, the simplified system is $z^k \frac{d\psi''}{dz} = (diagonal(A_0) + diagonal(A_1)z + ...+ diagonal(A_{k-1})z^{k-1}) \psi''$
 
-and the overall Gauge transform is $(KF)$[...], and the inverse is $(KF)^{-1}$[...], so $\psi = (KF)^{-1}[\psi'']$
+and the overall Gauge transform is $(KF)$[...], and the inverse is $(KF)^{-1}$[...], so $\psi = (KF)^{-1}\psi''$
 
 After we get the fundamental solution $\Psi$, we can construct $\Phi$ on the Sto_k in a similar way.
 
