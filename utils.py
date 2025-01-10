@@ -25,7 +25,8 @@ def solve_1d(k, poly, psi):
 def solve_diag(k, diag_entries):
     psi = Function('psi')
     psis = []
-    for i in range(0, k):
+    n = len(diag_entries)
+    for i in range(0, n):
         poly = diag_entries[i]
         psii = solve_1d(k, poly, psi)
         ## We do this since we already know that psi is diagonal.
@@ -85,6 +86,17 @@ def transform_up_to(Series, order):
         Ans += Series[i]*z**i
     return Ans
 
+def Gauge(k, F, A):
+    F_inverse = F.inverse()
+    F_B = (F * A + Derivative(F, z).simplify() * z**k) * F_inverse 
+    F_B = F_B.simplify()
+    return F_B
+
+def get_diagonal(A):
+    A_diag = A.diagonal()
+    ans = sympy.diag(list(A_diag), unpack=True)
+    return ans
+
 
 def get_Gauge_up_to_order(A, k, order):
     AA = MatrixSeriesA(A)
@@ -92,14 +104,21 @@ def get_Gauge_up_to_order(A, k, order):
     F = construct_from_Hp(AA.n, z, f)
     ## This is the first Gauge Transform
     
-    F_after = truncate_after_k(F, k)
-    ## SS_first_k = truncate_first_k(SS, k)
-    log_K = integrate(F_after)
-    Ans = transform_up_to(log_K, order)
-    K_trunc = exp(-Ans).simplify()
-    ## This is the truncated second Gauge Transform
+    A_diag = get_diagonal(A)
+    if A_diag.free_symbols == set():
+        ## it is constant
+        K_trunc = eye(AA.n)
+    else:
+        AA_diag = MatrixSeriesA(A_diag)
+        F_after = truncate_after_k(AA_diag, k)
+        ## SS_first_k = truncate_first_k(SS, k)
+        log_K = integrate(F_after)
+        Ans = transform_up_to(log_K, order)
+        K_trunc = exp(-Ans).simplify()
+        ## This is the truncated second Gauge Transform
     F_trunc = transform_up_to(F, order)
-    Total = (K_trunc * F_trunc).simplify()
+    Total = K_trunc * F_trunc
+    Total = sympy.simplify(Total)
     ## The final Gauge transform is KS, corresponding to the transform of K \circ S
     return K_trunc, F_trunc, Total
 
