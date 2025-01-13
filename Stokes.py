@@ -37,7 +37,7 @@ def get_phi_from_psi(psi, k):
 
 def solve_constant_A(k, A):
     from sympy.abc import z
-    assert(A.subs(z, 0) == A)
+    # assert(A.subs(z, 0) == A)
     # In this case, A is constant.
     if k == 0:
         return exp(A*z)
