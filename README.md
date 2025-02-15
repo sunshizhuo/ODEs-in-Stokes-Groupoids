@@ -37,7 +37,7 @@ In this step, we let $F = ...(I+z^2H_2)(I+zH_1)$ where $H_p = {ad}^{-1}_{A_0}(A_
 
 and $({ad}_{A_0} - p)^{-1}(A_p^{OD})$ if $k=1$ 
 
-Note that $H_p$ should be found inductively (under the assumption that $A_0$, ...., $A_{p-1}$ are all diagonal after the transform of $(I+z^{p-1}H_{p-1}) ... (I+zH_1)$)
+Note that $H_p$ should be found inductively (under the assumption that $A_0$, ...., $A_{p-1}$ are all diagonal after the transform of $(I+z^{p-1}H_{p-1}) ... (I+zH_1)$ )
 
 After this transform, the ODE becomes $z^k \frac{d\psi'}{dz} = (D_0 + D_1 z + ...) \psi'$ where D_i are all diagonal.
 
