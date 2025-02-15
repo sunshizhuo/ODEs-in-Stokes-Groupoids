@@ -39,7 +39,7 @@ and $({ad}_{A_0} - p)^{-1}(A_p^{OD})$ if $k=1$
 
 Note that $H_p$ should be found inductively (under the assumption that $A_0$, ...., $A_{p-1}$ are all diagonal after the transform of $(I+z^{p-1}H_{p-1}) ... (I+zH_1)$ )
 
-After this transform, the ODE becomes $z^k \frac{d\psi'}{dz} = (D_0 + D_1 z + ...) \psi'$ where D_i are all diagonal.
+After this transform, the ODE becomes $z^k \frac{d\psi'}{dz} = (D_0 + D_1 z + ...) \psi'$ where $D_i$ are all diagonal.
 
 After doing this, we make the second Gauge Transform to transform it to the finite case, 
 
