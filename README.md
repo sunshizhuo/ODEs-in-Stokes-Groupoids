@@ -31,19 +31,21 @@ To do the Gauge transformation, the core idea is to transfer it to the case wher
 
 In order to solve this problem, we first need to make a change of variables $\psi' = F \psi$ (a change of coordinate), whereas $F = 1+zF_1 + z^2F_2 + ...$
 
-Then, let $B(z) = \frac{A(z)}{z}$, then after this change of coordinate, the original system becomes $\frac{d\psi'}{dz} = (FBF^{-1} + \frac{dF}{dz}F^{-1})\psi'$
+Then, let $B(z) = \frac{A(z)}{z^k}$, then after this change of coordinate, the original system becomes $\frac{d\psi'}{dz} = (FBF^{-1} + \frac{dF}{dz}F^{-1})\psi'$
 
-In this step, we let $F = (I+zH_1)(I+z^2H_2)...$ where $H_p = {ad}^{-1}_{A_0}(A_p^{OD})$ if $k > 1$ 
+In this step, we let $F = ...(I+z^2H_2)(I+zH_1)$ where $H_p = {ad}^{-1}_{A_0}(A_p^{OD})$ if $k > 1$ 
 
 and $({ad}_{A_0} - p)^{-1}(A_p^{OD})$ if $k=1$ 
 
-After this transform, the ODE becomes $z^k \frac{d\psi'}{dz} = (diagonal(A_0) + diagonal(A_1)z + ...) \psi'$
+Note that $H_p$ should be found inductively (under the assumption that $A_0$, ...., $A_{p-1}$ are all diagonal after the transform of $(I+z^{p-1}H_{p-1}) ... (I+zH_1)$)
+
+After this transform, the ODE becomes $z^k \frac{d\psi'}{dz} = (D_0 + D_1 z + ...) \psi'$ where D_i are all diagonal.
 
 After doing this, we make the second Gauge Transform to transform it to the finite case, 
 
 which is the transform $K = \exp(-\int{D_k+D_{k+1}z+...})$
 
-Finally, the simplified system is $z^k \frac{d\psi''}{dz} = (diagonal(A_0) + diagonal(A_1)z + ...+ diagonal(A_{k-1})z^{k-1}) \psi''$
+Finally, the simplified system is $z^k \frac{d\psi''}{dz} = (D_0 + D_1 z + ...+ D_{k-1} z^{k-1}) \psi''$
 
 and the overall Gauge transform is $(KF)$[...], and the inverse is $(KF)^{-1}$[...], so $\psi = (KF)^{-1}\psi''$
 
